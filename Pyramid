@@ -1,0 +1,167 @@
+//left hand
+
+#include <stdio.h>
+
+int main()
+{
+    int rows = 5;
+    int i, j, k; // Declaring variables outside the for loops
+
+    // Outer loop for each row
+    for (i = 1; i <= rows; i++) {
+
+        // Loop for printing * characters
+        for (j = 0; j < i; j++) {
+            printf("*");
+        }
+
+        printf("\n"); // Move to the next line after each row
+    }
+    return 0;
+}
+
+//Right hand pyramid
+
+#include <stdio.h>
+
+int main()
+{
+    int rows = 5;
+    int i, j; // Declaring variables outside the for loops
+
+    // Outer loop for each row
+    for (i = 1; i <= rows; i++) {
+
+        // Loop for printing leading spaces
+        for (j = 0; j < rows - i; j++) {
+            printf(" ");
+        }
+
+        // Loop for printing * characters
+        for (j = 0; j < i; j++) {
+            printf("*");
+        }
+
+        printf("\n"); // Move to the next line after each row
+    }
+    return 0;
+}
+
+//Full pyramid
+
+#include <stdio.h>
+
+int main()
+{
+    int rows = 5;
+    int i, j, k; // Declaring variables outside the for loops
+
+    // Outer loop for each row
+    for (i = 1; i <= rows; i++) {
+
+        // Loop for printing leading spaces
+        for (j = 0; j < rows - i; j++) {
+            printf(" ");
+        }
+
+        // Loop for printing * characters
+        for (k = 0; k < i; k++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+// inverted right-aligned half-pyramid
+
+#include <stdio.h>
+
+int main()
+{
+    int rows = 5;
+    int i, j; // Declaring variables outside the for loops
+
+    // Outer loop for each row
+    for (i = rows; i >= 1; i--) {
+
+        // Loop for printing leading spaces
+        for (j = 0; j < rows - i; j++) {
+            printf(" ");
+        }
+
+        // Loop for printing * characters
+        for (j = 0; j < i; j++) {
+            printf("*");
+        }
+
+        printf("\n"); // Move to the next line after each row
+    }
+    return 0;
+}
+
+*****
+ ****
+  ***
+   **
+    *
+
+//inverted left-aligned half-pyramid
+
+#include <stdio.h>
+
+int main()
+{
+    int rows = 5;
+    int i, j; // Declaring variables outside the for loops
+
+    // Outer loop for each row
+    for (i = 0; i < rows; i++) {
+
+        // Loop for printing leading spaces
+        for (j = 0; j < i; j++) {
+            printf(" ");
+        }
+
+        // Loop for printing * characters
+        for (j = 0; j < rows - i; j++) {
+            printf("*");
+        }
+
+        printf("\n"); // Move to the next line after each row
+    }
+    return 0;
+}
+*****
+ ****
+  ***
+   **
+    *
+
+
+//inverted full Pyramid
+#include <stdio.h>
+
+int main()
+{
+    int rows = 5;
+    int i, j; // Declaring variables outside the for loops
+
+    // Outer loop for each row
+    for (i = 0; i < rows; i++) {
+
+        // Loop for printing leading spaces
+        for (j = 0; j < i; j++) {
+            printf(" ");
+        }
+
+        // Loop for printing * characters
+        for (j = 0; j < 2 * (rows - i) - 1; j++) {
+            printf("*");
+        }
+
+        printf("\n"); // Move to the next line after each row
+    }
+    return 0;
+}
+
+
