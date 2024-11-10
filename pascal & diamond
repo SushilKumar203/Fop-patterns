@@ -1,0 +1,66 @@
+//pascal
+
+#include <stdio.h>
+
+int main() {
+    int rows, i, j, num = 1;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for(i = 0; i < rows; i++) {
+        // Printing spaces for formatting
+        for(j = 0; j <= rows - i; j++) {
+            printf(" ");
+        }
+
+        // Calculating and printing values in Pascal's triangle
+        num = 1;
+        for(j = 0; j <= i; j++) {
+            printf("%d ", num);
+            num = num * (i - j) / (j + 1);  // Calculate next value in row
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+//diamond
+#include <stdio.h>
+
+int main() {
+    int n, i, j, space;
+
+    printf("Enter the number of rows (half diamond height): ");
+    scanf("%d", &n);
+
+    // Upper half of the diamond
+    for(i = 1; i <= n; i++) {
+        // Printing spaces
+        for(space = 1; space <= n - i; space++) {
+            printf(" ");
+        }
+        // Printing stars
+        for(j = 1; j <= 2 * i - 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    // Lower half of the diamond
+    for(i = n - 1; i >= 1; i--) {
+        // Printing spaces
+        for(space = 1; space <= n - i; space++) {
+            printf(" ");
+        }
+        // Printing stars
+        for(j = 1; j <= 2 * i - 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
