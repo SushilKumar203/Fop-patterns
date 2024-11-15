@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main()
+{
+    int n, i, j; // Declare variable to store the number of rows.
+
+    printf("Input number of rows: "); // Prompt the user for input.
+    scanf("%d", &n); // Read the value of 'n' from the user.
+
+    for (i = 1; i <= n; i++) // Loop for the number of rows.
+    {
+        int start = i % 2; // Determine the starting value (0 for odd rows, 1 for even rows).
+
+        for (j = 1; j <= i; j++) // Loop for each element in the row.
+        {
+            printf("%d", start); // Print the current value.
+            start = 1 - start; // Toggle between 0 and 1.
+        }
+
+        printf("\n"); // Move to the next line after printing a row.
+    }
+}
